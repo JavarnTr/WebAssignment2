@@ -17,7 +17,7 @@
 				<h2 class="text-white">Phone Fix Booking System</h2>
 			</div>
 			<nav class="col-12 col-lg-4 p-2" style="background-color:#3f4a70;">
-				<button class="col-12 col-md-12 col-lg-5 btn btn-warning">Home</button>
+				<button class="col-12 col-md-12 col-lg-5 btn btn-warning" onclick="window.location.href='index.html';">Home</button>
 				<button class="col-12 col-md-12 col-lg-5 btn btn-info">Extension</button>
 			</nav>
 		</div>
@@ -29,10 +29,10 @@
 		<form name="techform" action="https://danieldangs.com/itwd6408/handle_survey.php" method="post" enctype="text/plain">
 			<div class="container-fluid">
 				<div class="row" style="min-height:80vh;">
-					<div class="col col-lg-4 col-md-12 col-sm-12 p-3" style="background-color:#f5c87f;">
+					<div class="col-lg-4 col-md-12 col-sm-12 p-3" style="background-color:#f5c87f;">
 						<h2>Customer Details</h2>			
 							<fieldset class="border border-primary col-12 col-lg-11 ms-2 me-4 mb-3">
-								<legend class="col-11 float-none w-auto">Customer Type:</legend>
+								<legend class="col-11 float-none w-auto m-3">Customer Type:</legend>
 								<div class="col-6">
 									<div class="form-check form-check-inline">
 										<label class="form-check-label" for="gridRadios1">
@@ -68,7 +68,7 @@
 							  
 							<div class="row mb-3">
 								<label for="inputName1" class="col-sm-2 col-form-label">First Name: </label>
-								<div class="col-8">
+								<div class="col-sm-10">
 								  <input type="text" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
@@ -126,21 +126,157 @@
 						
 					<div class="col p-3 col-lg-4 col-md-12 col-sm-12" style="background-color:#c2f0ee">
 						<h2>Repair Details</h2>
+							<div class="row mb-3">
+								<label for="inputName1" class="col-sm-2 col-form-label">Purchase Date: </label>
+								<div class="col-sm-10">
+								  <input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+							  
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">Repair Date: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+							
+							<fieldset class="border border-primary col-12 col-lg-11 ms-2 me-4 mb-3">
+								<legend class="col-11 float-none w-auto m-3">Under Warranty:</legend>
+								<div class="col-6 ml-2">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="gridCheck1">
+										<label class="form-check-label" for="gridCheck1">
+											Warranty
+										</label>
+									</div>																							 
+								</div>
+							</fieldset>
+							
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">IMEI Number: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+							
+							<fieldset>
+								<div class="row mb-3">
+								  <label for="inputName1" class="col-sm-2 col-form-label">Make: </label>
+									<div class="col-sm-10">
+										<select class="form-select" id="specificSizeSelect" required>
+										  <option selected>Choose...</option>
+										  <option value="1">Apple</option>
+										  <option value="2">LG</option>
+										  <option value="3">Motorola</option>
+										  <option value="4">Samsung</option>
+										  <option value="5">Sony</option>
+										  <option value="6">Other</option>
+										</select>
+									</div>
+								 </div>
+							</fieldset>
+							
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">Model Number:: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+							
+							<fieldset>
+								<div class="row mb-3">
+								  <label for="inputName1" class="col-sm-2 col-form-label">Fault Category: </label>
+									<div class="col-sm-10">
+										<select class="form-select" id="specificSizeSelect" required>
+										  <option selected>Choose...</option>
+										  <option value="1">Battery</option>
+										  <option value="2">Charging</option>
+										  <option value="3">Screen</option>
+										  <option value="4">SD Storage</option>
+										  <option value="5">Software</option>
+										  <option value="6">Other</option>
+										</select>
+									</div>
+								 </div>
+							</fieldset>
+							
+							<div class="row mb-3">
+								<label for="inputEmail3" class="col-sm-2 col-form-label">Description: </label>
+								<div class="col-sm-10">
+									<textarea type="name" class="form-control" id="inputEmail3"/></textarea>
+								</div>
+							</div>												
 					</div>
 							
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="row p-3" style="background-color:#6cc4a7; min-height:40vh;">
 							<h2>Courtesy Phone Details</h2>
-						</div>				
+							<fieldset>
+								<div class="row mb-3">
+								  <label for="inputName1" class="col-sm-2 col-form-label">Item Type: </label>
+									<div class="col-sm-10">
+										<select class="form-select" id="specificSizeSelect" required>
+										  <option selected>Choose...</option>
+										  <option value="1">iPhone</option>
+										  <option value="2">Other Phone</option>
+										  <option value="3">Charger</option>
+										</select>
+									</div>
+									<button type="button" class="border border-dark btn btn-info col-2">Add</button>
+								</div>
+							</fieldset>													 
+								
+								<div class="col-12 border bg-light">
+							
+								</div>													
+						</div>
+					
+					
+					
 						<div class="row p-3" style="background-color:#ed5d53; min-height:40vh;">
 							<h2>Cost</h2>
-						</div>			
-					</div>
+								
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">Bond: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">Service Fee: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+								
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">Total: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">GST: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<label for="inputName2" class="col-sm-2 col-form-label">Total + GST: </label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								</div>
+							</div>
+						</div>
+					</div>				
 
 					<div class="col-12 border border-dark p-3 text-center" style="background-color:#ed5d53">				
 						<button type="reset" class="col border border-dark btn btn-danger">Reset</button>
 						<button type="submit" class="col border border-dark btn btn-success">Submit</button>
-						<button class="col border border-dark btn btn-info" href="index.html">FAQ</button>										
+						<button type="button" class="col border border-dark btn btn-info" onclick="window.location.href='faq.html';">FAQ</button>															
 					</div>		
 				</div>
 			</div>
@@ -152,7 +288,7 @@
 	<div class="container-fluid text-center">
 		<div class="row">
 			<div class="col border-dark p-4" style="background-color:#3f4a70;">
-				<h3 class="text-white">Footer</h3>
+				<h3 class="text-white">Advanced Web Design 2022</h3>
 			</div>
 		</div>
 	</div>
