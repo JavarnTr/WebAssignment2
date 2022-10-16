@@ -6,6 +6,7 @@
     <title>Home</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="icon" type="image/x-icon" href="images/phone.ico">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>	
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -34,14 +35,14 @@
 							<fieldset class="border border-primary col-12 col-lg-11 ms-2 me-4 mb-3">
 								<legend class="col-11 float-none w-auto m-3">Customer Type:</legend>
 								<div class="col-6">
-									<div class="form-check form-check-inline">
+									<div class="form-check form-check-inline m-1">
 										<label class="form-check-label" for="gridRadios1">
 											Consumer
 										</label>
 										<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>										
 									</div>
 									<br>
-									<div class="form-check form-check-inline">
+									<div class="form-check form-check-inline m-1">
 										<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
 										<label class="form-check-label" for="gridRadios2">
 											Business
@@ -111,14 +112,14 @@
 							<div class="row mb-3">
 								<label for="inputPhone" class="col-sm-2 col-form-label">Phone: </label>
 								<div class="col-sm-10">
-								  <input type="text" class="form-control" id="inputPhone" required>
+								  <input type="number" class="form-control" id="inputPhone" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
 								<label for="inputEmail" class="col-sm-2 col-form-label">Email: </label>
 								<div class="col-sm-10">
-								  <input type="text" class="form-control" id="inputEmail" required>
+								  <input type="email" class="form-control" id="inputEmail" required>
 								</div>
 							</div>						  						  		
 									
@@ -127,16 +128,16 @@
 					<div class="col p-3 col-lg-4 col-md-12 col-sm-12" style="background-color:#c2f0ee">
 						<h2>Repair Details</h2>
 							<div class="row mb-3">
-								<label for="inputName1" class="col-sm-2 col-form-label">Purchase Date: </label>
-								<div class="col-sm-10">
-								  <input type="text" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName1" class="col-sm-3 col-form-label">Purchase Date: </label>
+								<div class="col-sm-9">
+									<input type="date" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Repair Date: </label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">Repair Date: </label>
+								<div class="col-sm-9">
+									<input type="date" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							
@@ -153,16 +154,16 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">IMEI Number: </label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">IMEI Number: </label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-2 col-form-label">Make: </label>
-									<div class="col-sm-10">
+								  <label for="inputName1" class="col-sm-3 col-form-label">Make: </label>
+									<div class="col-sm-9">
 										<select class="form-select" id="specificSizeSelect" required>
 										  <option selected>Choose...</option>
 										  <option value="1">Apple</option>
@@ -177,16 +178,16 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Model Number:: </label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">Model Number: </label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-2 col-form-label">Fault Category: </label>
-									<div class="col-sm-10">
+								  <label for="inputName1" class="col-sm-3 col-form-label">Fault Category: </label>
+									<div class="col-sm-9">
 										<select class="form-select" id="specificSizeSelect" required>
 										  <option selected>Choose...</option>
 										  <option value="1">Battery</option>
@@ -201,9 +202,9 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputEmail3" class="col-sm-2 col-form-label">Description: </label>
-								<div class="col-sm-10">
-									<textarea type="name" class="form-control" id="inputEmail3"/></textarea>
+								<label for="inputEmail3" class="col-sm-3 col-form-label">Description: </label>
+								<div class="col-sm-9">
+									<textarea type="name" class="form-control" rows="8" style="resize: none" id="inputEmail3"/></textarea>
 								</div>
 							</div>												
 					</div>
@@ -222,7 +223,7 @@
 										  <option value="3">Charger</option>
 										</select>
 									</div>
-									<button type="button" class="border border-dark btn btn-info col-2">Add</button>
+									<button type="button" class="border border-dark btn btn-info col-12 mt-1" id="addBtn">Add</button>
 								</div>
 							</fieldset>													 
 								
@@ -234,8 +235,7 @@
 					
 					
 						<div class="row p-3" style="background-color:#ed5d53; min-height:40vh;">
-							<h2>Cost</h2>
-								
+							<h2>Cost</h2>			
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-2 col-form-label">Bond: </label>
 								<div class="col-sm-10">
@@ -246,28 +246,28 @@
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-2 col-form-label">Service Fee: </label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+									<input type="number" class="form-control" id="serviceFee" value="85.00" required minlength="1">
 								</div>
 							</div>
 								
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-2 col-form-label">Total: </label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+									<input type="number" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-2 col-form-label">GST: </label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+									<input type="number" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-2 col-form-label">Total + GST: </label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+									<input type="number" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 						</div>
@@ -283,6 +283,34 @@
 		</form>	
 	</section>
 </main>
+
+<script>
+	//Change service fee depending on whether the user has warranty or not
+	$("#gridCheck1").change(function() {
+		if(this.checked) {
+			$("#serviceFee").val("0.00")
+		} else {
+			$("#serviceFee").val("85.00")
+		}
+	})
+
+	let courtesyList = [{item: 'iPhone', bond: 275},
+		{item: 'otherPhone', bond: 100},
+		{item: 'charger', bond: 30}
+	];
+
+	let appState = {customerType: 'customer',
+		courtesyPhone: {item: 'none', bond: 0 },//Allow to borrow ONLY 1 phone
+		courtesyCharger: {item: 'none', bond: 0}//Allow to borrow ONLY 1 charger
+ 	}; 
+
+	$("#addBtn").click(function(){
+		let selectedItemText = $("#itemList").find("selected").text();
+		let selectedItemValue = $("#itemList").find("").val();
+		let selectedItemBond = courtesyList.find(foundItem => foundItem.item.toLowerCase() == selectedItemValue.toLowerCase()).bond;
+	})
+</script>
+
 
 <footer class="mt-auto">
 	<div class="container-fluid text-center">
