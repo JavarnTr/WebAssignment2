@@ -19,7 +19,7 @@
 			</div>
 			<nav class="col-12 col-lg-4 p-2" style="background-color:#3f4a70;">
 				<button class="col-12 col-md-12 col-lg-5 btn btn-warning" onclick="window.location.href='index.html';">Home</button>
-				<button class="col-12 col-md-12 col-lg-5 btn btn-info">Extension</button>
+				<button class="col-12 col-md-12 col-lg-5 btn btn-info" onclick="window.location.href='extension.html';">Extension</button>
 			</nav>
 		</div>
 	</div>
@@ -284,33 +284,7 @@
 	</section>
 </main>
 
-<script>
-	//Change service fee depending on whether the user has warranty or not
-	$("#gridCheck1").change(function() {
-		if(this.checked) {
-			$("#serviceFee").val("0.00")
-		} else {
-			$("#serviceFee").val("85.00")
-		}
-	})
-
-	let courtesyList = [{item: 'iPhone', bond: 275},
-		{item: 'otherPhone', bond: 100},
-		{item: 'charger', bond: 30}
-	];
-
-	let appState = {customerType: 'customer',
-		courtesyPhone: {item: 'none', bond: 0 },//Allow to borrow ONLY 1 phone
-		courtesyCharger: {item: 'none', bond: 0}//Allow to borrow ONLY 1 charger
- 	}; 
-
-	$("#addBtn").click(function(){
-		let selectedItemText = $("#itemList").find("selected").text();
-		let selectedItemValue = $("#itemList").find("").val();
-		let selectedItemBond = courtesyList.find(foundItem => foundItem.item.toLowerCase() == selectedItemValue.toLowerCase()).bond;
-	})
-</script>
-
+<script src="javascript.js"></script>
 
 <footer class="mt-auto">
 	<div class="container-fluid text-center">
