@@ -39,11 +39,11 @@
 										<label class="form-check-label" for="gridRadios1">
 											Consumer
 										</label>
-										<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>										
+										<input class="form-check-input" type="radio" name="gridRadios" id="customerType" value="option1" checked required>										
 									</div>
 									<br>
 									<div class="form-check form-check-inline m-1">
-										<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+										<input class="form-check-input" type="radio" name="gridRadios" id="businessType" value="option2" required>
 										<label class="form-check-label" for="gridRadios2">
 											Business
 										</label>
@@ -53,8 +53,8 @@
 							
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-2 col-form-label">Title: </label>
-									<div class="col-sm-10">
+								  <label for="inputName1" class="col-sm-3 col-form-label">Title: </label>
+									<div class="col-sm-9">
 										<select class="form-select" id="specificSizeSelect" required>
 										  <option selected>Choose...</option>
 										  <option value="1">Mr</option>
@@ -68,57 +68,57 @@
 							</fieldset>
 							  
 							<div class="row mb-3">
-								<label for="inputName1" class="col-sm-2 col-form-label">First Name: </label>
-								<div class="col-sm-10">
+								<label for="inputName1" class="col-sm-3 col-form-label">First Name: </label>
+								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Last Name: </label>
-								<div class="col-sm-10">
+								<label for="inputName2" class="col-sm-3 col-form-label">Last Name: </label>
+								<div class="col-sm-9">
 									<input type="text" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div> 
 							
 							<div class="row mb-3">
-								<label for="inputStreet" class="col-sm-2 col-form-label">Street: </label>
-								<div class="col-sm-10">
+								<label for="inputStreet" class="col-sm-3 col-form-label">Street: </label>
+								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputStreet" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputSuburb" class="col-sm-2 col-form-label">Suburb: </label>
-								<div class="col-sm-10">
+								<label for="inputSuburb" class="col-sm-3 col-form-label">Suburb: </label>
+								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputSuburb" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputCity" class="col-sm-2 col-form-label">City: </label>
-								<div class="col-sm-10">
+								<label for="inputCity" class="col-sm-3 col-form-label">City: </label>
+								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputCity" required minlength="2">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputCode" class="col-sm-2 col-form-label">Postcode: </label>
-								<div class="col-sm-10">
+								<label for="inputCode" class="col-sm-3 col-form-label">Postcode: </label>
+								<div class="col-sm-9">
 								  <input type="number" class="form-control" id="inputCode" required minlength="4">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputPhone" class="col-sm-2 col-form-label">Phone: </label>
-								<div class="col-sm-10">
+								<label for="inputPhone" class="col-sm-3 col-form-label">Phone: </label>
+								<div class="col-sm-9">
 								  <input type="number" class="form-control" id="inputPhone" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputEmail" class="col-sm-2 col-form-label">Email: </label>
-								<div class="col-sm-10">
+								<label for="inputEmail" class="col-sm-3 col-form-label">Email: </label>
+								<div class="col-sm-9">
 								  <input type="email" class="form-control" id="inputEmail" required>
 								</div>
 							</div>						  						  		
@@ -130,14 +130,14 @@
 							<div class="row mb-3">
 								<label for="inputName1" class="col-sm-3 col-form-label">Purchase Date: </label>
 								<div class="col-sm-9">
-									<input type="date" class="form-control" id="inputName2" required minlength="3">
+									<input type="date" class="form-control" id="inputPurchase" required minlength="3">
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Repair Date: </label>
 								<div class="col-sm-9">
-									<input type="date" class="form-control" id="inputName2" required minlength="3">
+									<input type="date" class="form-control" id="inputRepair" required minlength="3">
 								</div>
 							</div>
 							
@@ -156,7 +156,7 @@
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">IMEI Number: </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputName2" required minlength="3">
+									<input type="number" class="form-control" id="inputIMEI" required minlength="3">
 								</div>
 							</div>
 							
@@ -180,7 +180,7 @@
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Model Number: </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputName2" required minlength="3">
+									<input type="number" class="form-control" id="inputModel" required minlength="3">
 								</div>
 							</div>
 							
@@ -214,60 +214,65 @@
 							<h2>Courtesy Phone Details</h2>
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-2 col-form-label">Item Type: </label>
-									<div class="col-sm-10">
-										<select class="form-select" id="specificSizeSelect" required>
+								  <label for="inputName1" class="col-sm-3 col-form-label">Item Type: </label>
+									<div class="col-sm-9">
+										<select class="form-select" id="itemList" required>
 										  <option selected>Choose...</option>
-										  <option value="1">iPhone</option>
-										  <option value="2">Other Phone</option>
-										  <option value="3">Charger</option>
+										  <option value="iPhone">iPhone</option>
+										  <option value="otherPhone">Other Phone</option>
+										  <option value="charger">Charger</option>
 										</select>
 									</div>
-									<button type="button" class="border border-dark btn btn-info col-12 mt-1" id="addBtn">Add</button>
+									<button type="button" class="border border-dark btn btn-info col-6 mt-1" id="addBtn">Add</button>
+									<button type="button" class="border border-dark btn btn-danger col-6 mt-1" id="removeBtn">Delete</button>
 								</div>
 							</fieldset>													 
 								
-								<div class="col-12 border bg-light">
-							
-								</div>													
-						</div>
-					
-					
+								<!--Table of added Courtesy items-->
+							<div class="row mt-2 ms-3 me-3 bg-white">
+								<table class="table" id="borrowItems">
+									<tr>
+										<td>Item</td>
+										<td>Cost</td>
+									</tr>																			  
+								</table>						
+							</div>												
+						</div>									
 					
 						<div class="row p-3" style="background-color:#ed5d53; min-height:40vh;">
 							<h2>Cost</h2>			
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Bond: </label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">Bond: </label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="bond" value="0.00">
 								</div>
 							</div>
 
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Service Fee: </label>
-								<div class="col-sm-10">
-									<input type="number" class="form-control" id="serviceFee" value="85.00" required minlength="1">
+								<label for="inputName2" class="col-sm-3 col-form-label">Service Fee: </label>
+								<div class="col-sm-9">									
+									<input type="number" class="form-control" id="serviceFee" value="85.00" readonly="readonly" required minlength="1">
 								</div>
 							</div>
 								
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Total: </label>
-								<div class="col-sm-10">
-									<input type="number" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">Total: </label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" id="inputTotal" required minlength="3">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">GST: </label>
-								<div class="col-sm-10">
-									<input type="number" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">GST: </label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" id="inputGST" required minlength="3">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-2 col-form-label">Total + GST: </label>
-								<div class="col-sm-10">
-									<input type="number" class="form-control" id="inputName2" required minlength="3">
+								<label for="inputName2" class="col-sm-3 col-form-label">Total + GST: </label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" id="inputTotalGST" required minlength="3">
 								</div>
 							</div>
 						</div>
