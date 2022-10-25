@@ -75,6 +75,16 @@ $("#removeBtn").click(function(e){
 	$('.newSelectedItem').remove();
 
 	//Update appstate
+	appState.courtesyPhone = {item: 'none', bond: 0.00};
+	appState.courtesyCharger = {item: 'none', bond: 0.00};
+});
+
+//Also remove the items when the form reset button is clicked
+$("#resetBtn").click(function(e){
+	//Remove all added rows with the name "newSelectedItem"
+	$('.newSelectedItem').remove();
+
+	//Update appstate
 	appState.courtesyPhone = {item: 'none', bond: 0};
 	appState.courtesyCharger = {item: 'none', bond: 0};
 });
