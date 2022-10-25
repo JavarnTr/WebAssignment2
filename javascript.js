@@ -99,8 +99,26 @@ $('#businessType').click(function() {
 	$("#bond").val(0);
 })
 
-//Click customer type radio button
+//Get the current date and set it as the maximum possible value for the purchase date input box.
+$(document).ready(function () {
+	var date = new Date();
+	var day = date.getDate()>9?date.getDate():"0"+date.getDate();
+	var month = (date.getMonth()+1)>9?(date.getMonth()+1):"0"+(date.getMonth()+1);
+	var year = date.getFullYear();
+	
+	//Full date in one variable
+	var fullDate = (year + "-" + month + "-" + day)
 
+	$('#inputPurchase').val(fullDate);
+	$("#inputPurchase").attr('max', fullDate);
+	
+});
+
+$(document).ready(function () {
+	var end = $('#inputPurchase').val()
+	$("#inputRepair").attr('max', end);
+   
+});
 
 //---------------------------------- FAQ Page ----------------------------------//
 

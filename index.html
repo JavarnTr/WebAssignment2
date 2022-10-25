@@ -33,7 +33,7 @@
 					<div class="col-lg-4 col-md-12 col-sm-12 p-3" style="background-color:#f5c87f;">
 						<h2>Customer Details</h2>			
 							<fieldset class="border border-primary col-12 col-lg-11 ms-2 me-4 mb-3">
-								<legend class="col-11 float-none w-auto m-3">Customer Type:</legend>
+								<legend class="col-11 float-none w-auto m-3">Customer Type: <strong style="color: rgb(194, 15, 15);">*</strong></legend>
 								<div class="col-6">
 									<div class="form-check form-check-inline m-1">
 										<label class="form-check-label" for="gridRadios1">
@@ -53,7 +53,7 @@
 							
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-3 col-form-label">Title: </label>
+								  <label for="inputName1" class="col-sm-3 col-form-label">Title: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 									<div class="col-sm-9">
 										<select class="form-select" id="specificSizeSelect" required>
 										  <option selected>Choose...</option>
@@ -68,56 +68,56 @@
 							</fieldset>
 							  
 							<div class="row mb-3">
-								<label for="inputName1" class="col-sm-3 col-form-label">First Name: </label>
+								<label for="inputName1" class="col-sm-3 col-form-label">First Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-								  <input type="text" class="form-control" id="inputName2" required minlength="3">
+								  <input type="text" class="form-control" id="inputName2" pattern="[a-zA-Z]*" required minlength="3" oninvalid="this.setCustomValidity('Please only enter letters')" oninput="this.setCustomValidity('')"/>
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-3 col-form-label">Last Name: </label>
+								<label for="inputName2" class="col-sm-3 col-form-label">Last Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="inputName2" required minlength="3">
 								</div>
 							</div> 
 							
 							<div class="row mb-3">
-								<label for="inputStreet" class="col-sm-3 col-form-label">Street: </label>
+								<label for="inputStreet" class="col-sm-3 col-form-label">Street: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputStreet" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputSuburb" class="col-sm-3 col-form-label">Suburb: </label>
+								<label for="inputSuburb" class="col-sm-3 col-form-label">Suburb: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputSuburb" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputCity" class="col-sm-3 col-form-label">City: </label>
+								<label for="inputCity" class="col-sm-3 col-form-label">City: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 								  <input type="text" class="form-control" id="inputCity" required minlength="2">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputCode" class="col-sm-3 col-form-label">Postcode: </label>
+								<label for="inputCode" class="col-sm-3 col-form-label">Postcode: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-								  <input type="number" class="form-control" id="inputCode" required minlength="4">
+								  <input type="number" class="form-control" id="inputCode" required min="1000" max="9999">
 								</div>
-							</div>
+							</div>	
 							
 							<div class="row mb-3">
-								<label for="inputPhone" class="col-sm-3 col-form-label">Phone: </label>
+								<label for="inputPhone" class="col-sm-3 col-form-label">Phone: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 								  <input type="number" class="form-control" id="inputPhone" required>
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputEmail" class="col-sm-3 col-form-label">Email: </label>
+								<label for="inputEmail" class="col-sm-3 col-form-label">Email: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 								  <input type="email" class="form-control" id="inputEmail" required>
 								</div>
@@ -130,14 +130,14 @@
 							<div class="row mb-3">
 								<label for="inputName1" class="col-sm-3 col-form-label">Purchase Date: </label>
 								<div class="col-sm-9">
-									<input type="date" class="form-control" id="inputPurchase" required minlength="3">
+									<input type="date" class="form-control" id="inputPurchase" required>
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Repair Date: </label>
 								<div class="col-sm-9">
-									<input type="date" class="form-control" id="inputRepair" required minlength="3">
+									<input type="date" class="form-control" id="inputRepair" required>
 								</div>
 							</div>
 							
@@ -280,7 +280,7 @@
 
 					<div class="col-12 border border-dark p-3 text-center" style="background-color:#ed5d53">				
 						<button id="resetBtn" type="reset" class="col border border-dark btn btn-danger">Reset</button>
-						<button type="submit" class="col border border-dark btn btn-success">Submit</button>
+						<button id="submitBtn" type="submit" class="col border border-dark btn btn-success">Submit</button>
 						<button type="button" class="col border border-dark btn btn-info" onclick="window.location.href='faq.html';">FAQ</button>															
 					</div>		
 				</div>
