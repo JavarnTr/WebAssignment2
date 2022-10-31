@@ -163,3 +163,11 @@ $('.btn-demo-area button').on('click', function(){
 	//Show only the content area matching to the clicked button
 	$('.content-demo-area div').eq($(this).index()).show(1000);
 });
+
+//---------------------------------- Repair Page ----------------------------------//
+$(document).ready(function() {
+	$("#submitBtn").click(function(){
+		var name = $("#inputName1").val();
+		$("#name").text(name);
+	})
+})
