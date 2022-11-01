@@ -167,7 +167,6 @@ $('.btn-demo-area button').on('click', function(){
 //---------------------------------- Repair Page ----------------------------------//
 $(document).ready(function() {
 	$("#submitBtn").click(function(){
-		$.get("index.html");
 		var name = $("#inputName1").val();
 		$("#name").text(name);
 	})
