@@ -14,9 +14,9 @@ $("#gridCheck1").change(function() {
 })
 
 //Bond
-let courtesyList = [{item: 'iPhone', bond: 275},
-	{item: 'otherPhone', bond: 100},
-	{item: 'charger', bond: 30}
+let courtesyList = [{item: 'iPhone', bond: 275.00},
+	{item: 'otherPhone', bond: 100.00},
+	{item: 'charger', bond: 30.00}
 ];
 
 let appState = {customerType: 'customer',
@@ -77,6 +77,8 @@ $("#removeBtn").click(function(e){
 	//Update appstate
 	appState.courtesyPhone = {item: 'none', bond: 0.00};
 	appState.courtesyCharger = {item: 'none', bond: 0.00};
+
+	$("#bond").val("0.00")
 });
 
 //Also remove the items when the form reset button is clicked
@@ -105,7 +107,7 @@ $('#submitBtn').click(function () {
 	var day = date.getDate()>9?date.getDate():"0"+date.getDate();
 	var month = (date.getMonth()+1)>9?(date.getMonth()+1):"0"+(date.getMonth()+1);
 	var year = date.getFullYear();
-	
+
 	//Full date in one variable
 	var fullDate = (year + "-" + month + "-" + day)
 	
@@ -113,7 +115,63 @@ $('#submitBtn').click(function () {
 
 	var end = $('#inputPurchase').val();
 	$("#inputRepair").attr('min', end);
+	$("#inputRepair").attr('max', fullDate);
 });
+
+//Warranty should be disabled if purchase date is greater than 24 months
+$('#inputPurchase').change(function () {
+	var date = new Date();
+	var day = date.getDate()>9?date.getDate():"0"+date.getDate();
+	var month = (date.getMonth()+1)>9?(date.getMonth()+1):"0"+(date.getMonth()+1);
+	
+	//If warranty was purchased, it will have expired after two years. This value is the current date two years ago for comparison with the purchase date.
+	var warrantyYear = date.getFullYear() - 2;
+	
+	//Both the current date and date two years ago stored as variables
+	var fullWarrantyYear = (warrantyYear + "-" + month + "-" + day);
+
+	var currentDate = $('#inputPurchase').val();
+	
+	//If the purchase date was two or more years ago, warranty will no longer be given as an option.
+	if (currentDate <= fullWarrantyYear) {
+		$("#gridCheck1").prop('disabled', true);
+		$("#gridCheck1").prop('checked', false);
+		$("#serviceFee").val("85.00")
+	} else {
+		$("#gridCheck1").prop('disabled', false);
+	}
+});
+
+
+$(document).ready(function () {
+	$('#gridCheck1, #inputDate').change(function () {
+		var bondValue = $('#bond').val();
+		var serviceValue = $('#serviceFee').val();
+	
+		var totalPrice = ((+bondValue) + (+serviceValue));
+		var fullGST = (totalPrice / 20) * 3;
+		var completePrice = ((+totalPrice) + (+fullGST));
+	
+		$('#inputTotal').val(totalPrice);
+		$('#inputGST').val(fullGST);
+		$('#inputTotalGST').val(completePrice);
+	});
+
+	$('#addBtn, #removeBtn').click(function () {
+		var bondValue = $('#bond').val();
+		var serviceValue = $('#serviceFee').val();
+	
+		var totalPrice = ((+bondValue) + (+serviceValue));
+		var fullGST = (totalPrice / 20) * 3;
+		var completePrice = ((+totalPrice) + (+fullGST));
+	
+		$('#inputTotal').val(totalPrice);
+		$('#inputGST').val(fullGST);
+		$('#inputTotalGST').val(completePrice);
+	});
+});
+
+
 
 //---------------------------------- FAQ Page ----------------------------------//
 

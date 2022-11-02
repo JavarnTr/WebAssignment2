@@ -70,7 +70,7 @@
 							<div class="row mb-3">
 								<label for="inputName1" class="col-sm-3 col-form-label">First Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-								  <input type="text" class="form-control" id="inputName1" pattern="[a-zA-Z]*" required minlength="3" oninvalid="this.setCustomValidity('Please only enter letters')" oninput="this.setCustomValidity('')"/>
+								  <input type="text" class="form-control" id="inputName1" pattern="[a-zA-Z]*" title="Letters Only" required minlength="3"/>
 								</div>
 							</div>
 							  
@@ -105,14 +105,14 @@
 							<div class="row mb-3">
 								<label for="inputCode" class="col-sm-3 col-form-label">Postcode: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-								  <input type="number" class="form-control" id="inputCode" required min="1000" max="9999">
+								  <input type="text" class="form-control" id="inputCode" pattern="[0-9]{4}" title="Please enter a 4 digit number" required>
 								</div>
 							</div>	
 							
 							<div class="row mb-3">
 								<label for="inputPhone" class="col-sm-3 col-form-label">Phone: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-								  <input type="number" class="form-control" id="inputPhone" required>
+								  <input type="text" class="form-control" id="inputPhone" pattern="([0-9\s\(\)\-\+])+" title="Please enter only numbers, spaces, (), -, or +" required>
 								</div>
 							</div>
 							
@@ -142,7 +142,7 @@
 							</div>
 							
 							<fieldset class="border border-primary col-12 col-lg-11 ms-2 me-4 mb-3">
-								<legend class="col-11 float-none w-auto m-3">Under Warranty:</legend>
+								<legend id="warrantyThing" class="col-11 float-none w-auto m-3">Under Warranty:</legend>
 								<div class="col-6 ml-2">
 									<div class="form-check form-check-inline">
 										<input class="form-check-input" type="checkbox" id="gridCheck1">
@@ -154,9 +154,9 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-3 col-form-label">IMEI Number: </label>
+								<label for="inputIMEI" class="col-sm-3 col-form-label">IMEI Number: </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputIMEI" required minlength="3">
+									<input type="number" class="form-control" id="inputIMEI" pattern="[0-9]{15}" title="The IMEI number should be 15 digits" required>
 								</div>
 							</div>
 							
@@ -178,7 +178,7 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-3 col-form-label">Model Number: </label>
+								<label for="inputModel" class="col-sm-3 col-form-label">Model Number: </label>
 								<div class="col-sm-9">
 									<input type="number" class="form-control" id="inputModel" required minlength="3">
 								</div>
@@ -202,9 +202,9 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputEmail3" class="col-sm-3 col-form-label">Description: </label>
+								<label for="inputDescription" class="col-sm-3 col-form-label">Description: </label>
 								<div class="col-sm-9">
-									<textarea type="name" class="form-control" rows="8" style="resize: none" id="inputEmail3"/></textarea>
+									<textarea type="name" class="form-control" rows="8" style="resize: none" id="inputDescription"/></textarea>
 								</div>
 							</div>												
 					</div>
@@ -214,7 +214,7 @@
 							<h2>Courtesy Phone Details</h2>
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-3 col-form-label">Item Type: </label>
+								  <label for="itemList" class="col-sm-3 col-form-label">Item Type: </label>
 									<div class="col-sm-9">
 										<select class="form-select" id="itemList" required>
 										  <option selected>Choose...</option>
@@ -244,35 +244,35 @@
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Bond: </label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="bond" value="0.00">
+									<input type="text" class="form-control" id="bond" value="0.00" readonly="readonly">
 								</div>
 							</div>
 
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Service Fee: </label>
 								<div class="col-sm-9">									
-									<input type="number" class="form-control" id="serviceFee" value="85.00" readonly="readonly" required minlength="1">
+									<input type="number" class="form-control" id="serviceFee" value="85.00" readonly="readonly">
 								</div>
 							</div>
 								
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Total: </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputTotal" required minlength="3">
+									<input type="number" class="form-control" id="inputTotal" value="85.00" readonly="readonly">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-3 col-form-label">GST: </label>
+								<label for="inputName2" class="col-sm-3 col-form-label">GST (15%): </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputGST" required minlength="3">
+									<input type="number" class="form-control" id="inputGST" value="12.75" readonly="readonly">
 								</div>
 							</div>
 							
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Total + GST: </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputTotalGST" required minlength="3">
+									<input type="number" class="form-control" id="inputTotalGST" value="97.75" readonly="readonly">
 								</div>
 							</div>
 						</div>
