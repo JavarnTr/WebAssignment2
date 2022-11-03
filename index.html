@@ -70,14 +70,14 @@
 							<div class="row mb-3">
 								<label for="inputName1" class="col-sm-3 col-form-label">First Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-								  <input type="text" class="form-control" id="inputName1" pattern="[a-zA-Z]*" title="Letters Only" required minlength="3"/>
+								  <input type="text" class="form-control" id="inputName1" pattern="[A-Za-z\s\-]{2,}" title="First name must be two characters or more, and consisting only of letters, spaces, or -" required/>
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
 								<label for="inputName2" class="col-sm-3 col-form-label">Last Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="inputName2" required minlength="3">
+									<input type="text" class="form-control" id="inputName2" pattern="[A-Za-z\s\-]{2,}" title="Last name must be two characters or more, and consisting only of letters, spaces, or -" required/>
 								</div>
 							</div> 
 							
