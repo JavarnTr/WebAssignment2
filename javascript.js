@@ -130,10 +130,10 @@ $('#inputPurchase').change(function () {
 	//Both the current date and date two years ago stored as variables
 	var fullWarrantyYear = (warrantyYear + "-" + month + "-" + day);
 
-	var currentDate = $('#inputPurchase').val();
+	var purchaseDate = $('#inputPurchase').val();
 	
 	//If the purchase date was two or more years ago, warranty will no longer be given as an option.
-	if (currentDate <= fullWarrantyYear) {
+	if (purchaseDate <= fullWarrantyYear) {
 		$("#gridCheck1").prop('disabled', true);
 		$("#gridCheck1").prop('checked', false);
 		$("#serviceFee").val("85.00")
