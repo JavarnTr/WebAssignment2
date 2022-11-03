@@ -144,7 +144,7 @@ $('#inputPurchase').change(function () {
 
 
 $(document).ready(function () {
-	$('#gridCheck1, #inputDate').change(function () {
+	$('#gridCheck1, #inputPurchase, #customerType, #businessType').change(function () {
 		var bondValue = $('#bond').val();
 		var serviceValue = $('#serviceFee').val();
 	
