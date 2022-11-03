@@ -99,7 +99,7 @@ $("#customerType").click(function () {
 
 $("#businessType").click(function () {
     appState.customerType = "business";
-    $("#bond").val(0);
+    $("#bond").val(0.00);
 });
 
 //Get the current date and set it as the maximum possible value for the purchase date input box.
