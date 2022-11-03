@@ -128,14 +128,14 @@
 					<div class="col p-3 col-lg-4 col-md-12 col-sm-12" style="background-color:#c2f0ee">
 						<h2>Repair Details</h2>
 							<div class="row mb-3">
-								<label for="inputName1" class="col-sm-3 col-form-label">Purchase Date: </label>
+								<label for="inputName1" class="col-sm-3 col-form-label">Purchase Date: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 									<input type="date" class="form-control" id="inputPurchase" required>
 								</div>
 							</div>
 							  
 							<div class="row mb-3">
-								<label for="inputName2" class="col-sm-3 col-form-label">Repair Date: </label>
+								<label for="inputName2" class="col-sm-3 col-form-label">Repair Date: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 									<input type="date" class="form-control" id="inputRepair" required>
 								</div>
@@ -154,18 +154,18 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputIMEI" class="col-sm-3 col-form-label">IMEI Number: </label>
+								<label for="inputIMEI" class="col-sm-3 col-form-label">IMEI Number: <strong style="color: rgb(194, 15, 15);">*</strong> </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="inputIMEI" pattern="[0-9]{15}" title="The IMEI number should be 15 digits" required>
+									<input type="text" class="form-control" id="inputIMEI" pattern="[0-9]{15}" title="The IMEI number should be 15 digits" required>
 								</div>
 							</div>
 							
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-3 col-form-label">Make: </label>
+								  <label for="inputName1" class="col-sm-3 col-form-label">Make: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 									<div class="col-sm-9">
 										<select class="form-select" id="specificSizeSelect" required>
-										  <option selected>Choose...</option>
+										  <option value="">Choose...</option>
 										  <option value="1">Apple</option>
 										  <option value="2">LG</option>
 										  <option value="3">Motorola</option>
@@ -178,7 +178,7 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputModel" class="col-sm-3 col-form-label">Model Number: </label>
+								<label for="inputModel" class="col-sm-3 col-form-label">Model Number: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
 									<input type="number" class="form-control" id="inputModel" required minlength="3">
 								</div>
@@ -186,10 +186,10 @@
 							
 							<fieldset>
 								<div class="row mb-3">
-								  <label for="inputName1" class="col-sm-3 col-form-label">Fault Category: </label>
+								  <label for="inputName1" class="col-sm-3 col-form-label">Fault Category: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 									<div class="col-sm-9">
 										<select class="form-select" id="specificSizeSelect" required>
-										  <option selected>Choose...</option>
+										  <option value="">Choose...</option>
 										  <option value="1">Battery</option>
 										  <option value="2">Charging</option>
 										  <option value="3">Screen</option>
@@ -202,9 +202,9 @@
 							</fieldset>
 							
 							<div class="row mb-3">
-								<label for="inputDescription" class="col-sm-3 col-form-label">Description: </label>
+								<label for="inputDescription" class="col-sm-3 col-form-label">Description: <strong style="color: rgb(194, 15, 15);">*</strong></label>
 								<div class="col-sm-9">
-									<textarea type="name" class="form-control" rows="8" style="resize: none" id="inputDescription"/></textarea>
+									<textarea type="name" class="form-control" rows="8" style="resize: none" required id="inputDescription"/></textarea>
 								</div>
 							</div>												
 					</div>
