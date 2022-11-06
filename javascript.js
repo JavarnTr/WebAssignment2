@@ -226,13 +226,58 @@ $(".btn-demo-area button").on("click", function () {
     //Hide all content areas
     $(".content-demo-area div").hide();
     //Show only the content area matching to the clicked button
-
-    $("#content-button-1").click(function() {
-        $('#content-area-1').fadeToggle(1000);
-    })
-    
-    
 });
+
+//Initially hide all advanced
+//$(".content-demo-area div ").hide();
+$("#content-area-1").hide();
+$("#content-area-2").hide();
+$("#content-area-3").hide();
+$("#content-area-4").hide();
+$("#content-area-5").hide();
+
+//Loop through all buttons and add "click" event to each of them
+//and also the logic: hide all content sections and show only the according
+//highlight background the clicked button
+$(".btn-demo-area button").on("click", function () {
+    //Set all buttons background to white
+    $(".btn-demo-area button").css("background-color", "white");
+
+    //Set the clicked button background to "orange" color
+    $(this).css("background-color", "orange");
+
+    //Hide all the content areas
+    //$(".content-demo-area div").hide();
+    $("#content-area-1").hide();
+    $("#content-area-2").hide();
+    $("#content-area-3").hide();
+    $("#content-area-4").hide();
+    $("#content-area-5").hide();
+
+    //Show only the content area matching to the clicked button
+    //$(".content-demo-area div").eq($(this).index()).show(1000);
+    //$("#content-area-5").eq($(this).index()).show(1000);
+});
+
+$("#content-btn-1").on("click", function () {
+    $("#content-area-1").show(1000);
+})
+
+$("#content-btn-2").on("click", function () {
+    $("#content-area-2").show(1000);
+})
+
+$("#content-btn-3").on("click", function () {
+    $("#content-area-3").show(1000);
+})
+
+$("#content-btn-4").on("click", function () {
+    $("#content-area-4").show(1000);
+})
+
+$("#content-btn-5").on("click", function () {
+    $("#content-area-5").show(1000);
+})
 
 //---------------------------------- Repair Page ----------------------------------//
 $(document).ready(function () {
