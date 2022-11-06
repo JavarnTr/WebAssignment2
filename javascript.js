@@ -226,7 +226,12 @@ $(".btn-demo-area button").on("click", function () {
     //Hide all content areas
     $(".content-demo-area div").hide();
     //Show only the content area matching to the clicked button
-    $(".content-demo-area div").eq($(this).index()).show(1000);
+
+    $("#content-button-1").click(function() {
+        $('#content-area-1').fadeToggle(1000);
+    })
+    
+    
 });
 
 //---------------------------------- Repair Page ----------------------------------//
