@@ -120,16 +120,23 @@ $("#submitBtn").click(function () {
 });
 
 //Warranty should be disabled if purchase date is greater than 24 months
-$("#inputPurchase").change(function () {
+$("#inputPurchase, #inputRepair").change(function () {
     var date = new Date();
     var day = date.getDate() > 9 ? date.getDate() : "0" + date.getDate();
     var month = date.getMonth() + 1 > 9 ? date.getMonth() + 1 : "0" + (date.getMonth() + 1);
+    var year = date.getFullYear();
+    
 
     //If warranty was purchased, it will have expired after two years. This value is the current date two years ago for comparison with the purchase date.
     var warrantyYear = date.getFullYear() - 2;
 
     //Both the current date and date two years ago stored as variables
     var fullWarrantyYear = warrantyYear + "-" + month + "-" + day;
+    var fullDate = year + "-" + month + "-" + day;
+
+    var end = $("#inputPurchase").val();
+    $("#inputRepair").attr("min", end);
+    $("#inputRepair").attr("max", fullDate);
 
     var purchaseDate = $("#inputPurchase").val();
 
@@ -142,6 +149,8 @@ $("#inputPurchase").change(function () {
         $("#gridCheck1").prop("disabled", false);
     }
 });
+
+
 
 $(document).ready(function () {
     $("#gridCheck1, #inputPurchase, #customerType, #businessType").change(function () {
