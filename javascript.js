@@ -320,23 +320,17 @@ function getData(){
     localStorage.setItem("descriptionValue", addDescription)
 
 }
-
+//Retrieve the stored data and insert it into the allocated spaces on the repair page.
 document.getElementById("nameData").innerHTML=localStorage.getItem("nameValue");
-
 document.getElementById("streetData").innerHTML=localStorage.getItem("addressLn1Value");
 document.getElementById("addressData").innerHTML=localStorage.getItem("addressLn2Value");
-
 document.getElementById("phoneData").innerHTML=localStorage.getItem("phoneNumber");
 document.getElementById("emailData").innerHTML=localStorage.getItem("emailAddress");
-
 document.getElementById("purchaseData").innerHTML=localStorage.getItem("purchaseValue");
 document.getElementById("repairData").innerHTML=localStorage.getItem("repairValue");
-
 document.getElementById("warrantyData").innerHTML=localStorage.getItem("warrantyValue");
-
 document.getElementById("imeiData").innerHTML=localStorage.getItem("imeiValue");
 document.getElementById("makeData").innerHTML=localStorage.getItem("makeValue");
-
 document.getElementById("modelData").innerHTML=localStorage.getItem("modelValue");
 document.getElementById("faultData").innerHTML=localStorage.getItem("faultValue");
 document.getElementById("descriptionData").innerHTML=localStorage.getItem("descriptionValue");
