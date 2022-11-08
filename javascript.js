@@ -150,8 +150,6 @@ $("#inputPurchase, #inputRepair").change(function () {
     }
 });
 
-
-
 $(document).ready(function () {
     $("#gridCheck1, #inputPurchase, #customerType, #businessType").change(function () {
         var bondValue = $("#bond").val();
