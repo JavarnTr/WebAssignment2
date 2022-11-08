@@ -263,21 +263,81 @@ $("#content-button-5").on("click", function () {
 });
 
 //Get the image from the image upload and display it in a div
-const image_input = document.querySelector("#image-input");
-image_input.addEventListener("change", function() {
-  const reader = new FileReader();
-  reader.addEventListener("load", () => {
-    const uploaded_image = reader.result;
-    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
-  });
-  reader.readAsDataURL(this.files[0]);
-});
+//const image_input = document.querySelector("#image-input");
+//image_input.addEventListener("change", function() {
+  //const reader = new FileReader();
+  //reader.addEventListener("load", () => {
+    //const uploaded_image = reader.result;
+    //document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+  //});
+  //reader.readAsDataURL(this.files[0]);
+//});
 
 
 //---------------------------------- Repair Page ----------------------------------//
-$(document).ready(function () {
-    $("#submitBtn").click(function () {
-        var name = $("#inputName1").val();
-        $("#name").text(name);
-    });
-});
+
+function getData(){
+    //Retrieve the values of all the input boxes
+    var title = $('#selectTitle').val();
+    var firstname = $("#firstName").val();
+    var lastname = $("#lastName").val();
+    var fullname = (title + " " + firstname + " " + lastname);
+
+    var street = $('#inputStreet').val();
+    var suburb = $('#inputSuburb').val();
+    var city = $('#inputCity').val();
+    var postcode = $('#inputCode').val();
+    var fullAddress = (suburb + " " + city + " " + postcode);
+
+    var phone = $('#inputPhone').val();
+    var email = $('#inputEmail').val();
+
+    var purchaseDate = $('#inputPurchase').val();
+    var repairDate = $('#inputRepair').val();
+
+    var warrantyCheck = $("#gridCheck1").is(':checked');
+
+    var IMEI = $("#inputIMEI").val();
+    var phoneMake = $("#selectMake").val();
+    var modelNum = $("#inputModel").val();
+    var faultCategory = $("#selectFault").val();
+    var addDescription = $("#inputDescription").val();
+
+    //Save each value to localstorage so that it can be carried over to another page
+    localStorage.setItem("nameValue", fullname)
+    localStorage.setItem("addressLn1Value", street)
+    localStorage.setItem("addressLn2Value", fullAddress)
+    localStorage.setItem("phoneNumber", phone)
+    localStorage.setItem("emailAddress", email)
+    localStorage.setItem("purchaseValue", purchaseDate)
+    localStorage.setItem("repairValue", repairDate)
+    localStorage.setItem("warrantyValue", warrantyCheck)
+    localStorage.setItem("imeiValue", IMEI)
+    localStorage.setItem("makeValue", phoneMake)
+
+    localStorage.setItem("modelValue", modelNum)
+    localStorage.setItem("faultValue", faultCategory)
+    localStorage.setItem("descriptionValue", addDescription)
+
+}
+
+document.getElementById("nameData").innerHTML=localStorage.getItem("nameValue");
+
+document.getElementById("streetData").innerHTML=localStorage.getItem("addressLn1Value");
+document.getElementById("addressData").innerHTML=localStorage.getItem("addressLn2Value");
+
+document.getElementById("phoneData").innerHTML=localStorage.getItem("phoneNumber");
+document.getElementById("emailData").innerHTML=localStorage.getItem("emailAddress");
+
+document.getElementById("purchaseData").innerHTML=localStorage.getItem("purchaseValue");
+document.getElementById("repairData").innerHTML=localStorage.getItem("repairValue");
+
+document.getElementById("warrantyData").innerHTML=localStorage.getItem("warrantyValue");
+
+document.getElementById("imeiData").innerHTML=localStorage.getItem("imeiValue");
+document.getElementById("makeData").innerHTML=localStorage.getItem("makeValue");
+
+document.getElementById("modelData").innerHTML=localStorage.getItem("modelValue");
+document.getElementById("faultData").innerHTML=localStorage.getItem("faultValue");
+document.getElementById("descriptionData").innerHTML=localStorage.getItem("descriptionValue");
+

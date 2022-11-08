@@ -26,7 +26,7 @@
 
         <main>
             <section style="min-height: 80vh;">
-                <form method="POST" action="repair.html">
+                <form id="registrationForm" action="repair.html">
                     <div class="container-fluid">
                         <div class="row" style="min-height: 80vh;">
                             <div class="col-lg-4 col-md-12 col-sm-12 p-3" style="background-color: #f5c87f;">
@@ -54,13 +54,13 @@
                                     <div class="row mb-3">
                                         <label for="inputName1" class="col-sm-3 col-form-label">Title: <strong style="color: rgb(194, 15, 15);">*</strong></label>
                                         <div class="col-sm-9">
-                                            <select class="form-select" id="specificSizeSelect" required>
+                                            <select class="form-select" id="selectTitle" required>
                                                 <option value="">Choose...</option>
-                                                <option value="1">Mr</option>
-                                                <option value="2">Mrs</option>
-                                                <option value="3">Ms</option>
-                                                <option value="4">Miss</option>
-                                                <option value="5">Dr</option>
+                                                <option value="Mr">Mr</option>
+                                                <option value="Mrs">Mrs</option>
+                                                <option value="Ms">Ms</option>
+                                                <option value="Miss">Miss</option>
+                                                <option value="Dr">Dr</option>
                                             </select>
                                         </div>
                                     </div>
@@ -69,14 +69,14 @@
                                 <div class="row mb-3">
                                     <label for="inputName1" class="col-sm-3 col-form-label">First Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName1" pattern="[A-Za-z\s\-]{2,}" title="First name must be two characters or more, and consisting only of letters, spaces, or -" required />
+                                        <input type="text" id="firstName" class="form-control" pattern="[A-Za-z\s\-]{2,}" title="First name must be two characters or more, and consisting only of letters, spaces, or -" required />
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="inputName2" class="col-sm-3 col-form-label">Last Name: <strong style="color: rgb(194, 15, 15);">*</strong></label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName2" pattern="[A-Za-z\s\-]{2,}" title="Last name must be two characters or more, and consisting only of letters, spaces, or -" required />
+                                        <input type="text" class="form-control" id="lastName" pattern="[A-Za-z\s\-]{2,}" title="Last name must be two characters or more, and consisting only of letters, spaces, or -" required />
                                     </div>
                                 </div>
 
@@ -162,14 +162,14 @@
                                     <div class="row mb-3">
                                         <label for="inputName1" class="col-sm-3 col-form-label">Make: <strong style="color: rgb(194, 15, 15);">*</strong></label>
                                         <div class="col-sm-9">
-                                            <select class="form-select" id="specificSizeSelect" required>
+                                            <select class="form-select" id="selectMake" required>
                                                 <option value="">Choose...</option>
-                                                <option value="1">Apple</option>
-                                                <option value="2">LG</option>
-                                                <option value="3">Motorola</option>
-                                                <option value="4">Samsung</option>
-                                                <option value="5">Sony</option>
-                                                <option value="6">Other</option>
+                                                <option value="Apple">Apple</option>
+                                                <option value="LG">LG</option>
+                                                <option value="Motorola">Motorola</option>
+                                                <option value="Samsung">Samsung</option>
+                                                <option value="Sony">Sony</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
                                     </div>
@@ -186,14 +186,14 @@
                                     <div class="row mb-3">
                                         <label for="inputName1" class="col-sm-3 col-form-label">Fault Category: <strong style="color: rgb(194, 15, 15);">*</strong></label>
                                         <div class="col-sm-9">
-                                            <select class="form-select" id="specificSizeSelect" required>
+                                            <select class="form-select" id="selectFault" required>
                                                 <option value="">Choose...</option>
-                                                <option value="1">Battery</option>
-                                                <option value="2">Charging</option>
-                                                <option value="3">Screen</option>
-                                                <option value="4">SD Storage</option>
-                                                <option value="5">Software</option>
-                                                <option value="6">Other</option>
+                                                <option value="Battery">Battery</option>
+                                                <option value="Charging">Charging</option>
+                                                <option value="Screen">Screen</option>
+                                                <option value="SD Storage">SD Storage</option>
+                                                <option value="Software">Software</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
                                     </div>
@@ -278,7 +278,7 @@
 
                             <div class="col-12 border border-dark p-3 text-center" style="background-color: #ed5d53;">
                                 <button id="resetBtn" type="reset" class="col border border-dark btn btn-danger">Reset</button>
-                                <button id="submitBtn" type="submit" class="col border border-dark btn btn-success">Submit</button>
+                                <button id="submitBtn" type="submit" class="col border border-dark btn btn-success" onclick="getData()">Submit</button>
                                 <button type="button" class="col border border-dark btn btn-info" onclick="window.location.href='faq.html';">FAQ</button>
                             </div>
                         </div>
