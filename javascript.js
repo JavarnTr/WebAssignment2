@@ -282,26 +282,32 @@ function getData(){
     var firstname = $("#firstName").val();
     var lastname = $("#lastName").val();
     var fullname = (title + " " + firstname + " " + lastname);
-
     var street = $('#inputStreet').val();
     var suburb = $('#inputSuburb').val();
     var city = $('#inputCity').val();
     var postcode = $('#inputCode').val();
     var fullAddress = (suburb + " " + city + " " + postcode);
-
     var phone = $('#inputPhone').val();
     var email = $('#inputEmail').val();
-
     var purchaseDate = $('#inputPurchase').val();
     var repairDate = $('#inputRepair').val();
-
     var warrantyCheck = $("#gridCheck1").is(':checked');
-
     var IMEI = $("#inputIMEI").val();
     var phoneMake = $("#selectMake").val();
     var modelNum = $("#inputModel").val();
     var faultCategory = $("#selectFault").val();
     var addDescription = $("#inputDescription").val();
+    var bond = $("#bond").val();
+    var service = $("#serviceFee").val();
+    var total = $("#inputTotal").val();
+    var gst = $("#inputGST").val();
+    var totalGST = $("#inputTotalGST").val();
+
+    //Get the current time and date
+    var invoiceTime = new Date($.now());
+
+    //Generate a random number and insert it into the job number text.
+    var randomNumber = Math.floor((Math.random() * 9999) + 999);
 
     //Save each value to localstorage so that it can be carried over to another page
     localStorage.setItem("nameValue", fullname)
@@ -314,12 +320,18 @@ function getData(){
     localStorage.setItem("warrantyValue", warrantyCheck)
     localStorage.setItem("imeiValue", IMEI)
     localStorage.setItem("makeValue", phoneMake)
-
     localStorage.setItem("modelValue", modelNum)
     localStorage.setItem("faultValue", faultCategory)
     localStorage.setItem("descriptionValue", addDescription)
-
+    localStorage.setItem("bondValue", "$" + bond)
+    localStorage.setItem("serviceValue", "$" + service)
+    localStorage.setItem("totalValue", "$" + total)
+    localStorage.setItem("gstValue", "$" + gst)
+    localStorage.setItem("totalGSTValue", "$" + totalGST)   
+    localStorage.setItem("timeValue", invoiceTime)
+    localStorage.setItem("jobValue", randomNumber) 
 }
+
 //Retrieve the stored data and insert it into the allocated spaces on the repair page.
 document.getElementById("nameData").innerHTML=localStorage.getItem("nameValue");
 document.getElementById("streetData").innerHTML=localStorage.getItem("addressLn1Value");
@@ -334,4 +346,11 @@ document.getElementById("makeData").innerHTML=localStorage.getItem("makeValue");
 document.getElementById("modelData").innerHTML=localStorage.getItem("modelValue");
 document.getElementById("faultData").innerHTML=localStorage.getItem("faultValue");
 document.getElementById("descriptionData").innerHTML=localStorage.getItem("descriptionValue");
-
+document.getElementById("bondData").innerHTML=localStorage.getItem("bondValue");
+document.getElementById("serviceData").innerHTML=localStorage.getItem("serviceValue");
+document.getElementById("totalData").innerHTML=localStorage.getItem("totalValue");
+document.getElementById("gstData").innerHTML=localStorage.getItem("gstValue");
+document.getElementById("totalGSTData").innerHTML=localStorage.getItem("totalGSTValue");
+document.getElementById("amountDue").innerHTML=localStorage.getItem("totalGSTValue");
+document.getElementById("invoiceDate").innerHTML=localStorage.getItem("timeValue");
+document.getElementById("jobNum").innerHTML=localStorage.getItem("jobValue");
