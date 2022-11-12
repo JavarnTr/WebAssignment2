@@ -307,7 +307,6 @@ function getData(){
     var total = $("#inputTotal").val();
     var gst = $("#inputGST").val();
     var totalGST = $("#inputTotalGST").val();
-
     var bondItems = document.getElementById("itemSelect").outerHTML;
 
     //Get the current time and date
