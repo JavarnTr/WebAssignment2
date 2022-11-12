@@ -311,7 +311,7 @@ function getData(){
     //Get the current time and date
     var invoiceTime = new Date($.now());
 
-    var myDate = new Date(new Date().getTime()+(52460601000));
+    var myDate = new Date(new Date().getTime()+(5*24*60*60*1000));
 
     //Generate a random number and insert it into the job number text.
     var randomNumber = Math.floor((Math.random() * 9999) + 999);
