@@ -273,20 +273,17 @@ $("#content-button-5").on("click", function () {
   //reader.readAsDataURL(this.files[0]);
 //});
 
+var chosenColor = $("#selectColor").val()
+$("#extensionHeader1, #extensionHeader2").css("background-color", chosenColor)
 
-$(".item").draggable({
-    start: function() {
-      //Reset
-      $(".item").draggable("option", "revert", true);
-    }
+$("#selectColor").change(function(){
+    var chosenColor = $("#selectColor").val()
+	$("#extensionHeader1, #extensionHeader2").css("background-color", chosenColor)
+    localStorage.setItem("saveColor", chosenColor)
 });
-  
-$(".dragging").droppable({
-    drop: function(event, ui) {   
-    $(ui.draggable).detach().css({top: 0,left: 0}).appendTo(this);
-    }
-})
 
+$("#extensionHeader1, #extensionHeader2").css("background-color", localStorage.getItem("saveColor"));
+$("#selectColor").val(localStorage.getItem("saveColor"));
 
 //---------------------------------- Repair Page ----------------------------------//
 
@@ -368,3 +365,4 @@ document.getElementById("totalGSTData").innerHTML=localStorage.getItem("totalGST
 document.getElementById("amountDue").innerHTML=localStorage.getItem("totalGSTValue");
 document.getElementById("invoiceDate").innerHTML=localStorage.getItem("timeValue");
 document.getElementById("jobNum").innerHTML=localStorage.getItem("jobValue");
+

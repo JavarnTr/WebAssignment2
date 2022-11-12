@@ -16,10 +16,10 @@
 <header>
 	<div class="container-fluid text-center">
 		<div class="row">
-			<div class="col-12 col-lg-8 p-4" style="background-color:#3f4a70;">
+			<div class="col-12 col-lg-8 p-4" id="extensionHeader1" style="background-color:#3f4a70;">
 				<h2 class="text-white">Phone Fix Booking System</h2>
 			</div>
-			<nav class="col-12 col-lg-4 p-2" style="background-color:#3f4a70;">
+			<nav class="col-12 col-lg-4 p-2" id="extensionHeader2" style="background-color:#3f4a70;">
 				<button class="col-12 col-md-12 col-lg-5 btn btn-warning" onclick="window.location.href='index.html';">Home</button>
 				<button class="col-12 col-md-12 col-lg-5 btn btn-info" onclick="window.location.href='extension.html';">Extension</button>
 			</nav>
@@ -33,15 +33,22 @@
 		<div class="col-12 col-lg-3 col btn-demo-area h-50">
 			<button class="col-12" id="content-button-1">DEMO 1</button>
 			<button class="col-12" id="content-button-2">Drag and Drop</button>
-			<button class="col-12" id="content-button-3">DEMO 3</button>
+			<button class="col-12" id="content-button-3">Customize Website Style</button>
 			<button class="col-12" id="content-button-4">DEMO 4</button>
 			<button class="col-12" id="content-button-5">DEMO 5</button>
 		</div>
 		<div class="col-12 col-lg-9 bg-dark content-demo-area" style="min-height: 81vh;">
 			<div class="bg-primary" id="content-area-1" style="min-height: 100vh;"><h2>File Upload</h2>
-				<input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
-				<div id="display-image"></div>
-				
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg" onchange="previewFile(this);">
+						</div>
+						<div class="col-12" id="display-image">
+							<img id="previewImg" src="/examples/images/transparent.png" alt="Placeholder" >	
+						</div>						
+					</div>
+				</div>								
 			</div>
 			<!-- Second content area for advancedJS -->
 		<div class="bg-secondary" id="content-area-2" style="min-height: 100vh;">
@@ -60,8 +67,17 @@
 					<div class="dropping">Shopping Cart</div>
 				</div>	
 			</div>				
-		</div>
-			<div class="bg-warning" id="content-area-3" style="min-height: 100vh;">ADVANCED JS DEMO 3 HERE</div>
+		</div>			
+			<div class="bg-warning" id="content-area-3" style="min-height: 100vh;">ADVANCED JS DEMO 3 HERE
+				<p>Choose the colour for this page's header. Due to localstorage, the website will remember what you choose so it will remain the same next time you visit.</p>
+				<select class="form-select" id="selectColor">
+					<option value="#3f4a70">Blue</option>
+					<option value="#a83238">Red</option>
+					<option value="#4cb06f">Green</option>
+					<option value="#8f4cb0">Purple</option>
+					<option value="#000000">Dark Mode</option>
+				</select>
+			</div>
 			<div class="bg-danger" id="content-area-4" style="min-height: 100vh;">ADVANCED JS DEMO 4 HERE</div>
 			<div class="bg-success" id="content-area-5" style="min-height: 100vh;">ADVANCED JS DEMO 5 HERE</div>
 		</div>
@@ -69,6 +85,21 @@
 </div>
 
 <script src="javascript.js"></script>
+<script>
+//Drag and drop feature
+$(".item").draggable({
+    start: function() {
+      $(".item").draggable("option", "revert", true);
+    }
+});
+  
+$(".dragging").droppable({
+    drop: function(event, ui) {   
+    $(ui.draggable).detach().css({top: 0,left: 0}).appendTo(this);
+    }
+});
+
+</script>
 </main>
 
 <footer class="mt-auto">
