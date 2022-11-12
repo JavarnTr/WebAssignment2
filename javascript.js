@@ -43,7 +43,7 @@ $("#addBtn").click(function (e) {
 		</tr> `;
 
     if (appState.courtesyPhone.item == "none" && selectedItemValue.toLowerCase().includes("phone")) {
-        $("#borrowItems").append(newRow);
+        $("#itemSelect").append(newRow);
         //Update
         appState.courtesyPhone.item = selectedItemValue;
         appState.courtesyPhone.bond = selectedItemBond;
@@ -54,7 +54,7 @@ $("#addBtn").click(function (e) {
             $("#bond").val(0);
         }
     } else if (appState.courtesyCharger.item == "none" && selectedItemValue.toLowerCase().includes("charger")) {
-        $("#borrowItems").append(newRow);
+        $("#itemSelect").append(newRow);
         //Update
         appState.courtesyCharger.item = selectedItemValue;
         appState.courtesyCharger.bond = selectedItemBond;
