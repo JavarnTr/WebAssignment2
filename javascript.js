@@ -178,6 +178,16 @@ $(document).ready(function () {
     });
 });
 
+
+const ACCESS_TOKEN = 'pk.eyJ1IjoiamF2YXJudHIiLCJhIjoiY2xhZGxlamV6MDEwNzNubHNybXhsbWZqMyJ9.kZd0LsErD8oZIQAbEo5SIQ';
+const script = document.getElementById('autoComplete');
+script.onload = () => {
+const collection = mapboxsearch.autofill({
+    accessToken: ACCESS_TOKEN
+});
+};
+
+
 //---------------------------------- FAQ Page ----------------------------------//
 
 //Get the json data for the FAQ page
@@ -211,54 +221,48 @@ $("#search-box").on("keyup", function () {
 
 //---------------------------------- Extension Page ----------------------------------//
 
-//Initially hide all advanced
-//$(".content-demo-area div ").hide();
+//Hide all content areas by default
 $("#content-area-1").hide();
 $("#content-area-2").hide();
 $("#content-area-3").hide();
 $("#content-area-4").hide();
 $("#content-area-5").hide();
 
-//Loop through all buttons and add "click" event to each of them
-//and also the logic: hide all content sections and show only the according
-//highlight background the clicked button
+
 $(".btn-demo-area button").on("click", function () {
-//Set all buttons background to white
+    //Button background color
     $(".btn-demo-area button").css("background-color", "white");
 
-    //Set the clicked button background to "orange" color
+    //Change the color of the selected button to indicate which one is selected.
     $(this).css("background-color", "orange");
 
-    //Hide all the content areas
-    //$(".content-demo-area div").hide();
+    
     $("#content-area-1").hide();
     $("#content-area-2").hide();
     $("#content-area-3").hide();
     $("#content-area-4").hide();
     $("#content-area-5").hide();
 
-    //Show only the content area matching to the clicked button
-    //$(".content-demo-area div").eq($(this).index()).show(1000);
-    //$("#content-area-5").eq($(this).index()).show(1000);
+    
 });
 
-$("#content-button-1").on("click", function () {
+$("#contentBtn1").on("click", function () {
     $("#content-area-1").show(1000);
 });
 
-$("#content-button-2").on("click", function () {
+$("#contentBtn2").on("click", function () {
     $("#content-area-2").show(1000);
 });
 
-$("#content-button-3").on("click", function () {
+$("#contentBtn3").on("click", function () {
     $("#content-area-3").show(1000);
 });
 
-$("#content-button-4").on("click", function () {
+$("#contentBtn4").on("click", function () {
     $("#content-area-4").show(1000);
 });
 
-$("#content-button-5").on("click", function () {
+$("#contentBtn5").on("click", function () {
     $("#content-area-5").show(1000);
 });
 
