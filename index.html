@@ -291,6 +291,15 @@
         </main>
 
     <script src="javascript.js"></script>
+    <script>
+        const ACCESS_TOKEN = 'pk.eyJ1IjoiamF2YXJudHIiLCJhIjoiY2xhZGxlamV6MDEwNzNubHNybXhsbWZqMyJ9.kZd0LsErD8oZIQAbEo5SIQ';
+        const script = document.getElementById('autoComplete');
+        script.onload = () => {
+        const collection = mapboxsearch.autofill({
+            accessToken: ACCESS_TOKEN
+        });
+        };
+    </script>
 
     <footer class="mt-auto">
     <div class="container-fluid text-center">

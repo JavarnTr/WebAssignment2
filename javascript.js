@@ -178,16 +178,6 @@ $(document).ready(function () {
     });
 });
 
-
-const ACCESS_TOKEN = 'pk.eyJ1IjoiamF2YXJudHIiLCJhIjoiY2xhZGxlamV6MDEwNzNubHNybXhsbWZqMyJ9.kZd0LsErD8oZIQAbEo5SIQ';
-const script = document.getElementById('autoComplete');
-script.onload = () => {
-const collection = mapboxsearch.autofill({
-    accessToken: ACCESS_TOKEN
-});
-};
-
-
 //---------------------------------- FAQ Page ----------------------------------//
 
 //Get the json data for the FAQ page
