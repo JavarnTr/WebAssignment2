@@ -311,6 +311,8 @@ function getData(){
     //Get the current time and date
     var invoiceTime = new Date($.now());
 
+    var myDate = new Date(new Date().getTime()+(52460601000));
+
     //Generate a random number and insert it into the job number text.
     var randomNumber = Math.floor((Math.random() * 9999) + 999);
 
@@ -335,6 +337,7 @@ function getData(){
     localStorage.setItem("totalGSTValue", "$" + totalGST)   
     localStorage.setItem("timeValue", invoiceTime)
     localStorage.setItem("jobValue", randomNumber) 
+    localStorage.setItem("paymentValue", myDate) 
 }
 
 //Retrieve the stored data and insert it into the allocated spaces on the repair page.
@@ -359,4 +362,4 @@ document.getElementById("totalGSTData").innerHTML=localStorage.getItem("totalGST
 document.getElementById("amountDue").innerHTML=localStorage.getItem("totalGSTValue");
 document.getElementById("invoiceDate").innerHTML=localStorage.getItem("timeValue");
 document.getElementById("jobNum").innerHTML=localStorage.getItem("jobValue");
-
+document.getElementById("payData").innerHTML=localStorage.getItem("paymentValue");
