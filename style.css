@@ -4,10 +4,15 @@
     border: 1px solid black;
     background-position: center;
     background-size: cover;
-  }
+}
   
-  /*--- Drag and Drop ---*/
-.drag-area {
+.item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.dragging{
   width: 450px;
   height: 450px;
   display: inline-block;
@@ -17,21 +22,8 @@
   border: 1px solid black;
 }
 
-.drop-area {
+.dropping {
   position: absolute;
-  margin: 0 auto;
-  color: blue;
   bottom: 10px;
   left: 20px;
-}
-
-.item {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-}
-
-.result {
-  display: inline-block;
-  margin-left: 30px;
 }

@@ -275,13 +275,13 @@ $("#content-button-5").on("click", function () {
 
 
 $(".item").draggable({
-    start: function(event, ui) {
+    start: function() {
       //Reset
       $(".item").draggable("option", "revert", true);
     }
 });
   
-$(".drag-area").droppable({
+$(".dragging").droppable({
     drop: function(event, ui) {   
     $(ui.draggable).detach().css({top: 0,left: 0}).appendTo(this);
     }

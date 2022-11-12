@@ -28,8 +28,9 @@
 </header>
 
 <main>
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-12 col-lg-3 row btn-demo-area h-50">
+		<div class="col-12 col-lg-3 col btn-demo-area h-50">
 			<button class="col-12" id="content-button-1">DEMO 1</button>
 			<button class="col-12" id="content-button-2">Drag and Drop</button>
 			<button class="col-12" id="content-button-3">DEMO 3</button>
@@ -43,27 +44,31 @@
 				
 			</div>
 			<!-- Second content area for advancedJS -->
-			<div class="bg-secondary" id="content-area-2" style="min-height: 100vh;">
-				<h2>Choose your courtesy phone:</h2>
+		<div class="bg-secondary" id="content-area-2" style="min-height: 100vh;">
+				<div class="col-12">
+					<h2>Choose your courtesy phone:</h2>
 				<p>If you have chosen to buy a temporary courtesy phone to use while yours is being repaired, you can choose which phone models you would like by dragging and dropping them into the shopping cart.</p>
-				<div class="drag-area">
-					<div class="drop-area">Courtesy Phone Options</div>
+				<div class="dragging col-12">
+					<div class="dropping">Courtesy Phone Options</div>
 					<img class="item" src="Images/s21.jpg">
 					<img class="item" src="Images/iphonese.jpg">
 					<img class="item" src="Images/samsungs22.jpg">
 					<img class="item" src="Images/iphone14.jpg">
 				</div>
 				
-				<div class="drag-area">
-					<div class="drop-area">Shopping Cart</div>
+				<div class="dragging col-12">
+					<div class="dropping">Shopping Cart</div>
 				</div>	
-			</div>
+			</div>				
+		</div>
 			<div class="bg-warning" id="content-area-3" style="min-height: 100vh;">ADVANCED JS DEMO 3 HERE</div>
 			<div class="bg-danger" id="content-area-4" style="min-height: 100vh;">ADVANCED JS DEMO 4 HERE</div>
 			<div class="bg-success" id="content-area-5" style="min-height: 100vh;">ADVANCED JS DEMO 5 HERE</div>
 		</div>
 	</div>	
-	<script src="javascript.js"></script>
+</div>
+
+<script src="javascript.js"></script>
 </main>
 
 <footer class="mt-auto">
