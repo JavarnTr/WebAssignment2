@@ -308,6 +308,8 @@ function getData(){
     var gst = $("#inputGST").val();
     var totalGST = $("#inputTotalGST").val();
 
+    var bondItems = document.getElementById("itemSelect").outerHTML;
+
     //Get the current time and date
     var invoiceTime = new Date($.now());
 
@@ -338,6 +340,7 @@ function getData(){
     localStorage.setItem("timeValue", invoiceTime)
     localStorage.setItem("jobValue", randomNumber) 
     localStorage.setItem("paymentValue", myDate) 
+    localStorage.setItem("tblItems", bondItems)
 }
 
 //Retrieve the stored data and insert it into the allocated spaces on the repair page.
@@ -363,3 +366,4 @@ document.getElementById("amountDue").innerHTML=localStorage.getItem("totalGSTVal
 document.getElementById("invoiceDate").innerHTML=localStorage.getItem("timeValue");
 document.getElementById("jobNum").innerHTML=localStorage.getItem("jobValue");
 document.getElementById("payData").innerHTML=localStorage.getItem("paymentValue");
+document.getElementById("itemTable").innerHTML=localStorage.getItem("tblItems");
