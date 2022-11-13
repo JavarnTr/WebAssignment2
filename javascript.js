@@ -216,7 +216,6 @@ $("#content-area-1").hide();
 $("#content-area-2").hide();
 $("#content-area-3").hide();
 $("#content-area-4").hide();
-$("#content-area-5").hide();
 
 
 $(".btn-demo-area button").on("click", function () {
@@ -230,7 +229,6 @@ $(".btn-demo-area button").on("click", function () {
     $("#content-area-2").hide();
     $("#content-area-3").hide();
     $("#content-area-4").hide();
-    $("#content-area-5").hide();
 });
 
 //Show content areas once their repective buttons have been clicked.
@@ -250,9 +248,6 @@ $("#contentBtn4").on("click", function () {
     $("#content-area-4").show(1000);
 });
 
-$("#contentBtn5").on("click", function () {
-    $("#content-area-5").show(1000);
-});
 
 //Let the user change the colour of the header, and using LocalStorage to remember that preference.
 var chosenColor = $("#selectColor").val()
