@@ -225,17 +225,15 @@ $(".btn-demo-area button").on("click", function () {
 
     //Change the color of the selected button to indicate which one is selected.
     $(this).css("background-color", "orange");
-
     
     $("#content-area-1").hide();
     $("#content-area-2").hide();
     $("#content-area-3").hide();
     $("#content-area-4").hide();
     $("#content-area-5").hide();
-
-    
 });
 
+//Show content areas once their repective buttons have been clicked.
 $("#contentBtn1").on("click", function () {
     $("#content-area-1").show(1000);
 });
@@ -256,17 +254,7 @@ $("#contentBtn5").on("click", function () {
     $("#content-area-5").show(1000);
 });
 
-//Get the image from the image upload and display it in a div
-//const image_input = document.querySelector("#image-input");
-//image_input.addEventListener("change", function() {
-  //const reader = new FileReader();
-  //reader.addEventListener("load", () => {
-    //const uploaded_image = reader.result;
-    //document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
-  //});
-  //reader.readAsDataURL(this.files[0]);
-//});
-
+//Let the user change the colour of the header, and using LocalStorage to remember that preference.
 var chosenColor = $("#selectColor").val()
 $("#extensionHeader1, #extensionHeader2").css("background-color", chosenColor)
 

@@ -54,10 +54,10 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
-							<input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg" onchange="previewFile(this);">
+							<input type="file" id="uploadImage" accept="image/jpeg, image/png, image/jpg" onchange="previewFile(this);">
 						</div>
-						<div class="col-12" id="display-image">
-							<img id="previewImg" src="/examples/images/transparent.png" alt="Placeholder" >	
+						<div class="col-12">
+							<img id="imageDisplay">
 						</div>						
 					</div>
 				</div>								
@@ -80,7 +80,7 @@
 				</div>	
 			</div>				
 		</div>			
-			<div class="bg-warning" id="content-area-3" style="min-height: 100vh;">ADVANCED JS DEMO 3 HERE
+			<div class="bg-warning" id="content-area-3" style="min-height: 100vh;"><h2>Customize Website Style:</h2>
 				<p>Choose the colour for this page's header. Due to localstorage, the website will remember what you choose so it will remain the same next time you visit.</p>
 				<select class="form-select" id="selectColor">
 					<option value="#3f4a70">Blue</option>
@@ -115,6 +115,18 @@ $(".dragging").droppable({
     $(ui.draggable).detach().css({top: 0,left: 0}).appendTo(this);
     }
 });
+
+//Read the input type: file and display it in an empty image.
+function previewFile(){
+	var img = $("#uploadImage").get(0).files[0];
+	if(img){
+		var readImage = new FileReader();
+		readImage.onload = function(){
+			$("#imageDisplay").attr("src", readImage.result);
+		}
+		readImage.readAsDataURL(img);
+	}
+}
 
 </script>
 </main>
